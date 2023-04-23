@@ -45,9 +45,10 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
+        npm i core-util-is
         npm run build --if-present
         npm run test --if-present
-        npm i core-util-is
+        npm start
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
